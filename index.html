@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Изменения в КИМ ОГЭ-2027</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        background: #eef5f3;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        min-height: 100vh;
+    }
+
+    .interactive {
+        width: 790px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #00A679 0%, #008f66 50%, #007a57 100%);
+        color: #fff;
+        padding: 18px 24px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    }
+
+    .buttons-block {
+        padding: 14px 20px 14px;
+        background: #f7fbfa;
+        border-bottom: 1px solid #d4ebe2;
+    }
+
+    .buttons-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .btn {
+        flex: 1;
+        min-width: 140px;
+        padding: 10px 14px;
+        background: #fff;
+        border: 2px solid #00A679;
+        color: #00A679;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+        background: #e8f7f0;
+        transform: translateY(-1px);
+    }
+
+    .btn.active {
+        background: #00A679;
+        color: #fff;
+        box-shadow: 0 3px 8px rgba(0,166,121,0.35);
+    }
+
+    .card-area {
+        padding: 20px 24px 24px;
+        min-height: 380px;
+    }
+
+    .card {
+        display: none;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .card.visible {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-title {
+        background: linear-gradient(135deg, #00A679, #007a57);
+        color: #fff;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+
+    .change-row {
+        border: 2px solid #00A679;
+        background: #f0faf5;
+        border-radius: 8px;
+        padding: 10px 14px;
+        margin-bottom: 10px;
+        color: #2a3a38;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .change-row ul {
+        margin: 6px 0 2px 18px;
+    }
+
+    .change-row ul li {
+        margin-bottom: 3px;
+    }
+
+    .download-btn {
+        display: block;
+        margin: 14px auto 0;
+        padding: 10px 26px;
+        background: #00A679;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .download-btn:hover {
+        background: #008f66;
+        transform: translateY(-1px);
+        box-shadow: 0 3px 8px rgba(0,166,121,0.35);
+    }
+</style>
+</head>
+<body>
+
+<div class="interactive">
+    <div class="header">Изменения в КИМ ОГЭ-2027</div>
+
+    <div class="buttons-block">
+        <div class="buttons-row">
+            <button class="btn active" data-card="oge-history">История</button>
+            <button class="btn" data-card="oge-social">Обществознание</button>
+            <button class="btn" data-card="oge-russian">Русский язык</button>
+            <button class="btn" data-card="oge-interview">Итоговое собеседование</button>
+        </div>
+    </div>
+
+    <div class="card-area">
+        <!-- ОГЭ История -->
+        <div class="card visible" data-id="oge-history">
+            <div class="card-title">Изменения в КИМ ОГЭ-2027 по истории</div>
+            <div class="change-row">Из работы исключили одно задание повышенного уровня сложности.</div>
+            <div class="change-row">Общее количество заданий уменьшилось с 24-х до 23-х.</div>
+            <div class="change-row">Максимальный первичный балл уменьшился с 37-ми до 35-ти.</div>
+            <div class="change-row">В демонстрационный вариант КИМ ОГЭ добавили приложение с параграфами из учебников, в которых содержится учебный материал для каждого задания.</div>
+            <button class="download-btn">Скачать</button>
+        </div>
+
+        <!-- ОГЭ Обществознание -->
+        <div class="card" data-id="oge-social">
+            <div class="card-title">Изменения в КИМ ОГЭ-2027 по обществознанию</div>
+            <div class="change-row">Общее количество заданий сократили с 24-х до 20-ти, максимальный первичный балл – с 37-ми до 32-х.</div>
+            <div class="change-row">Изменили модель задания на анализ фотоизображения: вместо 3-х дополнительных вопросов будет один вопрос или объяснение, а количество баллов за полный ответ уменьшилось с 3-х до 2-х.</div>
+            <div class="change-row">Задание на анализ статистической информации представят двумя моделями.</div>
+            <div class="change-row">Добавили новое задание 17 с развернутым ответом на анализ социальной информации и формулирование выводов.</div>
+            <div class="change-row">Сократили с 4-х до 3-х количество заданий с развернутым ответом на основе приведенного в КИМ текстового источника социальной информации.</div>
+            <button class="download-btn">Скачать</button>
+        </div>
+
+        <!-- ОГЭ Русский язык -->
+        <div class="card" data-id="oge-russian">
+            <div class="card-title">Изменения в КИМ ОГЭ-2027 по русскому языку</div>
+            <div class="change-row">Отдельные уточнения коснулись сочинения-рассуждения на основе опорного текста. В формулировки и систему оценивания этих заданий внесли обязательное требование – пояснение приводимых примеров из прочитанного текста.</div>
+            <div class="change-row">Увеличили максимальное количество баллов за всю работу с 37-ми до 38-ми.</div>
+            <button class="download-btn">Скачать</button>
+        </div>
+
+        <!-- ОГЭ Итоговое собеседование -->
+        <div class="card" data-id="oge-interview">
+            <div class="card-title">Изменения в итоговом собеседовании 2027</div>
+            <div class="change-row">
+                Общее количество заданий итогового собеседования сократили с 4-х до 3-х. Исключили подробный пересказ текста. При этом формы выборочного пересказа текста сохранили в новом задании под номером 2. Теперь в задании 2 не будет диалога на жизненные темы, оно будет представлено в формате беседы по прочитанному тексту. Количество вопросов для диалога увеличили с 3-х до 5-ти. Максимальный балл за выполнение нового задания – 5.
+            </div>
+            <div class="change-row">Максимальный первичный балл за всю работу уменьшили с 20-ти до 17-ти баллов.</div>
+            <div class="change-row">
+                Изменили процедуру проведения итогового собеседования. А именно – увеличили время на подготовительную работу с текстом с 2-х до 5-ти минут. На подготовку монологического высказывания – с 1-й до 2-х минут. При этом общее расчетное время на проведение итогового собеседования для одного школьника сохраняется – 15–16 минут.
+            </div>
+            <button class="download-btn">Скачать</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const buttons = document.querySelectorAll('.btn');
+    const cards = document.querySelectorAll('.card');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const targetId = btn.getAttribute('data-card');
+            cards.forEach(c => c.classList.remove('visible'));
+            const targetCard = document.querySelector(`.card[data-id="${targetId}"]`);
+            if (targetCard) targetCard.classList.add('visible');
+        });
+    });
+
+    // Скачивание карточки в формате Word (.doc)
+    document.querySelectorAll('.download-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.card');
+            const title = card.querySelector('.card-title').innerText;
+            const rows = card.querySelectorAll('.change-row');
+
+            let rowsHtml = '';
+            rows.forEach(r => {
+                rowsHtml += `<p style="border:1px solid #00A679; padding:8px; margin-bottom:8px; background:#f0faf5; font-family:Arial, sans-serif; font-size:12pt;">${r.innerHTML}</p>`;
+            });
+
+            const html = `
+                <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+                <head>
+                    <meta charset='utf-8'>
+                    <title>${title}</title>
+                </head>
+                <body style="font-family: Arial, sans-serif;">
+                    <h2 style="background:#00A679; color:#fff; padding:10px; text-align:center; font-family:Arial;">${title}</h2>
+                    ${rowsHtml}
+                </body>
+                </html>
+            `;
+
+            const blob = new Blob(['\ufeff', html], { type: 'application/msword' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            const fileName = title.replace(/[^\wа-яА-ЯёЁ\s-]/g, '').replace(/\s+/g, '_') + '.doc';
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        });
+    });
+</script>
+
+</body>
+</html>
